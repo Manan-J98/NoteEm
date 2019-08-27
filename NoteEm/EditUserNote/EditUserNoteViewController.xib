@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina5_5" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="EditUserNoteViewController" customModule="NoteEm" customModuleProvider="target">
+            <connections>
+                <outlet property="loader" destination="MBe-jK-DnF" id="gSJ-ag-ZCl"/>
+                <outlet property="noteTextView" destination="Vjy-fX-sNk" id="vur-Cf-H1F"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wX3-Mj-aej">
+                    <rect key="frame" x="0.0" y="686" width="414" height="50"/>
+                    <color key="backgroundColor" red="0.15061718230000001" green="0.42306715249999999" blue="0.69155120849999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="50" id="Fye-Yy-n4Y"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                    <state key="normal" title="Update">
+                        <color key="titleColor" red="0.96232908959999997" green="0.96303159000000005" blue="0.9692446589" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    </state>
+                    <connections>
+                        <action selector="updateAction:" destination="-1" eventType="touchUpInside" id="joj-6o-mAx"/>
+                    </connections>
+                </button>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="MBe-jK-DnF" customClass="NVActivityIndicatorView" customModule="NVActivityIndicatorView">
+                    <rect key="frame" x="182" y="343" width="50" height="50"/>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="50" id="32h-PN-k7F"/>
+                        <constraint firstAttribute="width" constant="50" id="93m-fQ-3H1"/>
+                    </constraints>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="string" keyPath="typeName" value="ballClipRotate"/>
+                        <userDefinedRuntimeAttribute type="color" keyPath="color">
+                            <color key="value" red="0.15061718230000001" green="0.42306715249999999" blue="0.69155120849999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        </userDefinedRuntimeAttribute>
+                    </userDefinedRuntimeAttributes>
+                </view>
+                <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" misplaced="YES" text="Standard Note" textAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="Vjy-fX-sNk">
+                    <rect key="frame" x="5" y="32" width="404" height="646"/>
+                    <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                    <fontDescription key="fontDescription" name="OriyaSangamMN" family="Oriya Sangam MN" pointSize="20"/>
+                    <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                            <integer key="value" value="5"/>
+                        </userDefinedRuntimeAttribute>
+                    </userDefinedRuntimeAttributes>
+                </textView>
+            </subviews>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="wX3-Mj-aej" secondAttribute="trailing" id="5O8-pS-gwq"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="wX3-Mj-aej" secondAttribute="bottom" id="DWb-o1-mr8"/>
+                <constraint firstItem="Vjy-fX-sNk" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="5" id="MMI-de-rao"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="Vjy-fX-sNk" secondAttribute="trailing" constant="5" id="YDr-sl-qhc"/>
+                <constraint firstItem="MBe-jK-DnF" firstAttribute="centerY" secondItem="i5M-Pr-FkT" secondAttribute="centerY" id="bCm-qu-r1F"/>
+                <constraint firstItem="wX3-Mj-aej" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="egl-IZ-gIa"/>
+                <constraint firstItem="Vjy-fX-sNk" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" constant="10" id="jYn-8Q-ShN"/>
+                <constraint firstItem="wX3-Mj-aej" firstAttribute="top" secondItem="Vjy-fX-sNk" secondAttribute="bottom" constant="10" id="sfG-1j-A5d"/>
+                <constraint firstItem="MBe-jK-DnF" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="ymm-N7-S4N"/>
+            </constraints>
+            <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
+            <point key="canvasLocation" x="99" y="112"/>
+        </view>
+    </objects>
+</document>
