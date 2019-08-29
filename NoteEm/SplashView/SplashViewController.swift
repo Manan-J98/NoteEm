@@ -11,36 +11,54 @@ import FirebaseAuth
 
 class SplashViewController: UIViewController {
 
+    // MARK: Outlets
+    @IBOutlet weak var splashImage: UIImageView!
+    @IBOutlet weak var registerButton: UIButton!
+    @IBOutlet weak var homeButton: UIButton!
+
+    // MARK: Variables
     var coordinator: AppCoordinator?
 
     override func viewDidLoad() {
         super.viewDidLoad()
-//        appLogo.layer.add(getRotation(), forKey: "rotationAnimation")
     }
-    
+
     override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
         self.navigationController?.navigationBar.isHidden = true
     }
 
     override func viewWillDisappear(_ animated: Bool) {
-    self.navigationController?.navigationBar.isHidden = false
-//        self.appLogo.layer.removeAllAnimations()
+        self.navigationController?.navigationBar.isHidden = false
     }
-//
-//    func getRotation() -> CABasicAnimation {
-//        let rotation: CABasicAnimation = CABasicAnimation(keyPath: "transform.rotation.z")
-//        rotation.toValue = Double.pi * 2
-//        rotation.duration = 10 // or however long you want ...
-//        rotation.isCumulative = true
-//        rotation.repeatCount = Float.greatestFiniteMagnitude
-//        return rotation
-//    }
+
+    override func viewDidLayoutSubviews() {
+        registerButton.center.x += self.view.bounds.width
+        homeButton.center.x += self.view.bounds.width
+    }
+
+
+
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        UIView.animate(withDuration: 0.5, delay: 0.0, options: [.curveEaseInOut, .repeat, .autoreverse], animations: {
+            self.splashImage.transform = CGAffineTransform(scaleX: 2.0, y: 2.0)
+        }, completion: nil)
+
+        UIView.animate(withDuration: 0.5, delay: 0.3, options: .curveEaseInOut, animations: {
+            self.registerButton.center.x -= self.view.bounds.width
+        }, completion: nil)
+
+        UIView.animate(withDuration: 0.5, delay: 0.4, options: .curveEaseInOut, animations: {
+            self.homeButton.center.x -= self.view.bounds.width
+        }, completion: nil)
+    }
 
     func checkLoggedInStatus() {
         if Auth.auth().currentUser != nil {
-             coordinator?.navigateToHomeScreen(alreadyLoggedIn: true)
+            coordinator?.navigateToHomeScreen(alreadyLoggedIn: true)
         } else {
-             coordinator?.navigateToHomeScreen(alreadyLoggedIn: false)
+            coordinator?.navigateToHomeScreen(alreadyLoggedIn: false)
         }
 
     }

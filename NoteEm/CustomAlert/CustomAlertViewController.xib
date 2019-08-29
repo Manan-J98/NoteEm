@@ -13,6 +13,8 @@
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="CustomAlertViewController" customModule="NoteEm" customModuleProvider="target">
             <connections>
                 <outlet property="backgroundView" destination="jnG-iW-DdU" id="4Sb-pO-6nC"/>
+                <outlet property="confirmationButton" destination="Kih-Yn-sHH" id="J7K-Pl-O03"/>
+                <outlet property="denyButton" destination="4Tp-lf-z18" id="hZH-6B-fl6"/>
                 <outlet property="messageLabel" destination="4be-7o-37l" id="x1s-qh-f4s"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
