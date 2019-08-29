@@ -35,13 +35,13 @@ class CustomAlertViewController: UIViewController {
     }
 
     override func viewDidLayoutSubviews() {
-        confirmationButton.center.y -= self.view.bounds.height
+        confirmationButton.center.y += self.view.bounds.height
         denyButton.center.y -= self.view.bounds.height
     }
 
     override func viewDidAppear(_ animated: Bool) {
         UIView.animate(withDuration: 0.5, delay: 0, options: .curveEaseInOut, animations: {
-            self.confirmationButton.center.y += self.view.bounds.height
+            self.confirmationButton.center.y -= self.view.bounds.height
             self.denyButton.center.y += self.view.bounds.height
         }, completion: nil)
     }
