@@ -10,9 +10,14 @@ import UIKit
 
 class CustomAlertViewController: UIViewController {
 
+    // MARK: Outlets
     @IBOutlet weak var messageLabel: UILabel!
+    @IBOutlet weak var confirmationButton: UIButton!
 
+    @IBOutlet weak var denyButton: UIButton!
     @IBOutlet weak var backgroundView: UIView!
+
+    // MARK: Variables
     var confirmAction: (() -> Void)?
     var negationAction: (() -> Void)?
 
@@ -29,10 +34,23 @@ class CustomAlertViewController: UIViewController {
 
     }
 
+    override func viewDidLayoutSubviews() {
+        confirmationButton.center.y -= self.view.bounds.height
+        denyButton.center.y -= self.view.bounds.height
+    }
+
+    override func viewDidAppear(_ animated: Bool) {
+        UIView.animate(withDuration: 0.5, delay: 0, options: .curveEaseInOut, animations: {
+            self.confirmationButton.center.y += self.view.bounds.height
+            self.denyButton.center.y += self.view.bounds.height
+        }, completion: nil)
+    }
+
     required init?(coder aDecoder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
 
+    // MARK: Callback
     @IBAction func confirmAction(_ sender: Any) {
       self.confirmAction?()
 

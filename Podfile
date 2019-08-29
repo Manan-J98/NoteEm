@@ -12,6 +12,8 @@ target 'NoteEm' do
  pod 'SwiftLint'
  pod 'Toast-Swift'
  pod 'NVActivityIndicatorView'
+ pod 'RxCocoa', '~> 5'
+
  # Pods for NoteEm
 
   target 'NoteEmTests' do
