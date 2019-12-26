@@ -12,6 +12,7 @@
 		D1A8D0E2B32A0866CF494CE0 /* Pods_NoteEmTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FC6001DEEEF15001FE8AC031 /* Pods_NoteEmTests.framework */; };
 		EC20126A2314ED2400646BDD /* CustomAlertViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC2012682314ED2400646BDD /* CustomAlertViewController.swift */; };
 		EC20126B2314ED2400646BDD /* CustomAlertViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = EC2012692314ED2400646BDD /* CustomAlertViewController.xib */; };
+		EC3EFDB523B4DBA50038D4CF /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC3EFDB423B4DBA50038D4CF /* BaseViewController.swift */; };
 		EC84C8CE2303D406005C5DF1 /* NoteViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC84C8CD2303D406005C5DF1 /* NoteViewModel.swift */; };
 		EC91D40A22FA9D3500BE0A8D /* .swiftlint.yml in Resources */ = {isa = PBXBuildFile; fileRef = EC91D40922FA9D3400BE0A8D /* .swiftlint.yml */; };
 		ECC4712823017B9100AB1D70 /* AddUserNotesViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = ECC4712623017B9100AB1D70 /* AddUserNotesViewController.xib */; };
@@ -90,6 +91,7 @@
 		DC9B62CF5B51DA9C299BE584 /* Pods_NoteEm.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_NoteEm.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		EC2012682314ED2400646BDD /* CustomAlertViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomAlertViewController.swift; sourceTree = "<group>"; };
 		EC2012692314ED2400646BDD /* CustomAlertViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CustomAlertViewController.xib; sourceTree = "<group>"; };
+		EC3EFDB423B4DBA50038D4CF /* BaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "\U0010BaseViewController.swift"; sourceTree = "<group>"; };
 		EC84C8CD2303D406005C5DF1 /* NoteViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoteViewModel.swift; sourceTree = "<group>"; };
 		EC91D40922FA9D3400BE0A8D /* .swiftlint.yml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = .swiftlint.yml; sourceTree = "<group>"; };
 		ECC4712623017B9100AB1D70 /* AddUserNotesViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AddUserNotesViewController.xib; sourceTree = "<group>"; };
@@ -209,6 +211,14 @@
 			path = CustomAlert;
 			sourceTree = "<group>";
 		};
+		EC3EFDB323B4DB870038D4CF /* BaseController */ = {
+			isa = PBXGroup;
+			children = (
+				EC3EFDB423B4DBA50038D4CF /* BaseViewController.swift */,
+			);
+			path = BaseController;
+			sourceTree = "<group>";
+		};
 		EC84C8CC2303D3F1005C5DF1 /* NoteViewModel */ = {
 			isa = PBXGroup;
 			children = (
@@ -256,6 +266,7 @@
 		ECCEC2C122F40A0800C3E2DE /* NoteEm */ = {
 			isa = PBXGroup;
 			children = (
+				EC3EFDB323B4DB870038D4CF /* BaseController */,
 				EC2012672314ED0600646BDD /* CustomAlert */,
 				ECF2A7BD230E56F2008B6FBA /* EditUserNote */,
 				ECC4711C230175EE00AB1D70 /* AddUserNote */,
@@ -756,6 +767,7 @@
 				ECF2A7BB230E56E3008B6FBA /* EditUserNoteViewController.swift in Sources */,
 				EC20126A2314ED2400646BDD /* CustomAlertViewController.swift in Sources */,
 				ECFEEAF222FBFE5F0079DA0E /* Singleton.swift in Sources */,
+				EC3EFDB523B4DBA50038D4CF /* BaseViewController.swift in Sources */,
 				ECCEC2C322F40A0800C3E2DE /* AppDelegate.swift in Sources */,
 				ECFEEAF622FC1BCC0079DA0E /* HomeTableViewCell.swift in Sources */,
 				ECFF9AA122F964B700505213 /* AppCoordinator.swift in Sources */,
