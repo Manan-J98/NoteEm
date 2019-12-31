@@ -1,5 +1,4 @@
 PODS:
-  - Alamofire (4.8.2)
   - BoringSSL-GRPC (0.0.3):
     - BoringSSL-GRPC/Implementation (= 0.0.3)
     - BoringSSL-GRPC/Interface (= 0.0.3)
@@ -107,8 +106,6 @@ PODS:
   - NVActivityIndicatorView/Presenter (4.7.0)
   - Protobuf (3.9.0)
   - SwiftLint (0.34.0)
-  - SwiftyDropbox (5.1.0):
-    - Alamofire (~> 4.8.2)
   - Toast-Swift (5.0.0)
 
 DEPENDENCIES:
@@ -117,12 +114,10 @@ DEPENDENCIES:
   - Firebase/Firestore
   - NVActivityIndicatorView
   - SwiftLint
-  - SwiftyDropbox
   - Toast-Swift
 
 SPEC REPOS:
-  https://github.com/cocoapods/specs.git:
-    - Alamofire
+  https://github.com/CocoaPods/Specs.git:
     - BoringSSL-GRPC
     - Firebase
     - FirebaseAnalytics
@@ -141,11 +136,9 @@ SPEC REPOS:
     - NVActivityIndicatorView
     - Protobuf
     - SwiftLint
-    - SwiftyDropbox
     - Toast-Swift
 
 SPEC CHECKSUMS:
-  Alamofire: ae5c501addb7afdbb13687d7f2f722c78734c2d3
   BoringSSL-GRPC: db8764df3204ccea016e1c8dd15d9a9ad63ff318
   Firebase: dedc9e48ea3f3649ad5f6b982f8a0c73508a14b5
   FirebaseAnalytics: 3fb375bc9d13779add4039716f868d233a473fad
@@ -164,9 +157,8 @@ SPEC CHECKSUMS:
   NVActivityIndicatorView: b19ddab2576f805cbe0fb2306cba3476e09a1dea
   Protobuf: 1097ca58584c8d9be81bfbf2c5ff5975648dd87a
   SwiftLint: 79d48a17c6565dc286c37efb8322c7b450f95c67
-  SwiftyDropbox: 7ca4961e0340c62c8d6d1ece91d67badfe4c0380
   Toast-Swift: 36f4720243c8582c2be243a60a51e193c761f541
 
-PODFILE CHECKSUM: 2ed9e984e812ca1504cceaa0f5aa7641c5b074ee
+PODFILE CHECKSUM: 7fd5144299fcc70dce0be8fcb9b8ea40a72a497a
 
-COCOAPODS: 1.6.2
+COCOAPODS: 1.8.1

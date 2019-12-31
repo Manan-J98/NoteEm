@@ -26,7 +26,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "NoteEm/AES.swift"
-            timestampString = "587992389.075942"
+            timestampString = "599120950.748194"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "30"
@@ -41,29 +41,13 @@
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "NoteEm/Coordinator/HomeCoordinator.swift"
-            timestampString = "588591117.8871289"
+            filePath = "NoteEm/HomeView/HomeViewPresenter.swift"
+            timestampString = "599483038.304418"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "29"
-            endingLineNumber = "29"
-            landmarkName = "navigateToHome()"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "NoteEm/Coordinator/AppCoordinator.swift"
-            timestampString = "588488704.27495"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "54"
-            endingLineNumber = "54"
-            landmarkName = "navigateToHomeScreen(alreadyLoggedIn:)"
+            startingLineNumber = "125"
+            endingLineNumber = "125"
+            landmarkName = "userDidAddNotes(withText:)"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>

@@ -21,6 +21,7 @@ class SplashViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        setupUI()
     }
 
     override func viewWillAppear(_ animated: Bool) {
@@ -32,28 +33,11 @@ class SplashViewController: UIViewController {
         self.navigationController?.navigationBar.isHidden = false
     }
 
-    override func viewDidLayoutSubviews() {
-        registerButton.center.x += self.view.bounds.width
-        homeButton.center.x += self.view.bounds.width
+    func setupUI() {
+        registerButton.setTransparentUI(with: "Register")
+        homeButton.setTransparentUI(with: "Home")
     }
-
-
-
-    override func viewDidAppear(_ animated: Bool) {
-        super.viewDidAppear(animated)
-        UIView.animate(withDuration: 0.5, delay: 0.0, options: [.curveEaseInOut, .repeat, .autoreverse], animations: {
-            self.splashImage.transform = CGAffineTransform(scaleX: 2.0, y: 2.0)
-        }, completion: nil)
-
-        UIView.animate(withDuration: 0.5, delay: 0.3, options: .curveEaseInOut, animations: {
-            self.registerButton.center.x -= self.view.bounds.width
-        }, completion: nil)
-
-        UIView.animate(withDuration: 0.5, delay: 0.4, options: .curveEaseInOut, animations: {
-            self.homeButton.center.x -= self.view.bounds.width
-        }, completion: nil)
-    }
-
+   
     func checkLoggedInStatus() {
         if Auth.auth().currentUser != nil {
             coordinator?.navigateToHomeScreen(alreadyLoggedIn: true)

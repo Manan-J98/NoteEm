@@ -23,16 +23,19 @@
             <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
+                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="appBackground" translatesAutoresizingMaskIntoConstraints="NO" id="w0s-mO-kQ5">
+                    <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                </imageView>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VqF-uV-Xcr">
-                    <rect key="frame" x="10" y="537" width="355" height="50"/>
-                    <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <rect key="frame" x="30" y="517" width="315" height="50"/>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     <constraints>
                         <constraint firstAttribute="height" constant="50" id="1fT-Y0-Aeq"/>
                     </constraints>
                     <state key="normal" title="Register"/>
                     <userDefinedRuntimeAttributes>
                         <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
-                            <integer key="value" value="5"/>
+                            <integer key="value" value="25"/>
                         </userDefinedRuntimeAttribute>
                     </userDefinedRuntimeAttributes>
                     <connections>
@@ -40,15 +43,15 @@
                     </connections>
                 </button>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sCH-cc-HVK">
-                    <rect key="frame" x="10" y="607" width="355" height="50"/>
-                    <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <rect key="frame" x="30" y="587" width="315" height="50"/>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     <constraints>
                         <constraint firstAttribute="height" constant="50" id="2kZ-Qr-XyM"/>
                     </constraints>
                     <state key="normal" title="Home"/>
                     <userDefinedRuntimeAttributes>
                         <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
-                            <integer key="value" value="5"/>
+                            <integer key="value" value="25"/>
                         </userDefinedRuntimeAttribute>
                     </userDefinedRuntimeAttributes>
                     <connections>
@@ -66,19 +69,25 @@
             </subviews>
             <color key="backgroundColor" red="0.91436755660000002" green="0.91506189110000002" blue="0.91447508340000006" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
             <constraints>
-                <constraint firstItem="sCH-cc-HVK" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="10" id="069-rc-M3g"/>
-                <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="sCH-cc-HVK" secondAttribute="bottom" constant="10" id="IlV-PB-MOk"/>
-                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="sCH-cc-HVK" secondAttribute="trailing" constant="10" id="RpU-hX-Thw"/>
+                <constraint firstItem="sCH-cc-HVK" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="30" id="069-rc-M3g"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="sCH-cc-HVK" secondAttribute="bottom" constant="30" id="IlV-PB-MOk"/>
+                <constraint firstItem="w0s-mO-kQ5" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="PCh-xi-2YN"/>
+                <constraint firstItem="w0s-mO-kQ5" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="Rd3-21-4Ek"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="sCH-cc-HVK" secondAttribute="trailing" constant="30" id="RpU-hX-Thw"/>
                 <constraint firstItem="gdp-uN-TAp" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="am2-gn-ggb"/>
-                <constraint firstItem="VqF-uV-Xcr" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="10" id="eOE-Jd-dZy"/>
-                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="VqF-uV-Xcr" secondAttribute="trailing" constant="10" id="iMW-qr-Nxm"/>
+                <constraint firstItem="w0s-mO-kQ5" firstAttribute="bottom" secondItem="fnl-2z-Ty3" secondAttribute="bottom" id="e6R-3U-NSS"/>
+                <constraint firstItem="VqF-uV-Xcr" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="30" id="eOE-Jd-dZy"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="VqF-uV-Xcr" secondAttribute="trailing" constant="30" id="iMW-qr-Nxm"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="w0s-mO-kQ5" secondAttribute="trailing" id="kCL-i7-c3H"/>
                 <constraint firstItem="sCH-cc-HVK" firstAttribute="top" secondItem="VqF-uV-Xcr" secondAttribute="bottom" constant="20" id="uG1-JZ-fd5"/>
                 <constraint firstItem="gdp-uN-TAp" firstAttribute="centerY" secondItem="i5M-Pr-FkT" secondAttribute="centerY" id="zeZ-hH-4Kw"/>
             </constraints>
             <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
+            <point key="canvasLocation" x="40.799999999999997" y="46.326836581709152"/>
         </view>
     </objects>
     <resources>
+        <image name="appBackground" width="1920" height="1080"/>
         <image name="notepad" width="512" height="512"/>
     </resources>
 </document>

@@ -5,14 +5,14 @@ target 'NoteEm' do
   # Comment the next line if you're not using Swift and don't want to use dynamic frameworks
   use_frameworks!
 
- pod 'SwiftyDropbox'
+  #pod 'SwiftyDropbox'
  pod 'Firebase/Core'
  pod 'Firebase/Firestore'
  pod 'Firebase/Auth'
  pod 'SwiftLint'
  pod 'Toast-Swift'
  pod 'NVActivityIndicatorView'
- pod 'RxCocoa', '~> 5'
+ #pod 'RxCocoa', '~> 5'
 
  # Pods for NoteEm
 

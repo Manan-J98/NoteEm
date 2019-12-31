@@ -12,6 +12,8 @@
 		D1A8D0E2B32A0866CF494CE0 /* Pods_NoteEmTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FC6001DEEEF15001FE8AC031 /* Pods_NoteEmTests.framework */; };
 		EC20126A2314ED2400646BDD /* CustomAlertViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC2012682314ED2400646BDD /* CustomAlertViewController.swift */; };
 		EC20126B2314ED2400646BDD /* CustomAlertViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = EC2012692314ED2400646BDD /* CustomAlertViewController.xib */; };
+		EC294DCA23B5CD56000A62C1 /* CustomNavigationView.xib in Resources */ = {isa = PBXBuildFile; fileRef = EC294DC923B5CD56000A62C1 /* CustomNavigationView.xib */; };
+		EC294DCC23B5CD6F000A62C1 /* CustomNavigationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC294DCB23B5CD6F000A62C1 /* CustomNavigationView.swift */; };
 		EC3EFDB523B4DBA50038D4CF /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC3EFDB423B4DBA50038D4CF /* BaseViewController.swift */; };
 		EC84C8CE2303D406005C5DF1 /* NoteViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC84C8CD2303D406005C5DF1 /* NoteViewModel.swift */; };
 		EC91D40A22FA9D3500BE0A8D /* .swiftlint.yml in Resources */ = {isa = PBXBuildFile; fileRef = EC91D40922FA9D3400BE0A8D /* .swiftlint.yml */; };
@@ -91,6 +93,8 @@
 		DC9B62CF5B51DA9C299BE584 /* Pods_NoteEm.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_NoteEm.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		EC2012682314ED2400646BDD /* CustomAlertViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomAlertViewController.swift; sourceTree = "<group>"; };
 		EC2012692314ED2400646BDD /* CustomAlertViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CustomAlertViewController.xib; sourceTree = "<group>"; };
+		EC294DC923B5CD56000A62C1 /* CustomNavigationView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CustomNavigationView.xib; sourceTree = "<group>"; };
+		EC294DCB23B5CD6F000A62C1 /* CustomNavigationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomNavigationView.swift; sourceTree = "<group>"; };
 		EC3EFDB423B4DBA50038D4CF /* BaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "\U0010BaseViewController.swift"; sourceTree = "<group>"; };
 		EC84C8CD2303D406005C5DF1 /* NoteViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoteViewModel.swift; sourceTree = "<group>"; };
 		EC91D40922FA9D3400BE0A8D /* .swiftlint.yml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = .swiftlint.yml; sourceTree = "<group>"; };
@@ -211,6 +215,15 @@
 			path = CustomAlert;
 			sourceTree = "<group>";
 		};
+		EC294DC823B5CD2F000A62C1 /* CustomNavigationView */ = {
+			isa = PBXGroup;
+			children = (
+				EC294DC923B5CD56000A62C1 /* CustomNavigationView.xib */,
+				EC294DCB23B5CD6F000A62C1 /* CustomNavigationView.swift */,
+			);
+			path = CustomNavigationView;
+			sourceTree = "<group>";
+		};
 		EC3EFDB323B4DB870038D4CF /* BaseController */ = {
 			isa = PBXGroup;
 			children = (
@@ -266,6 +279,7 @@
 		ECCEC2C122F40A0800C3E2DE /* NoteEm */ = {
 			isa = PBXGroup;
 			children = (
+				EC294DC823B5CD2F000A62C1 /* CustomNavigationView */,
 				EC3EFDB323B4DB870038D4CF /* BaseController */,
 				EC2012672314ED0600646BDD /* CustomAlert */,
 				ECF2A7BD230E56F2008B6FBA /* EditUserNote */,
@@ -573,6 +587,7 @@
 				ECC4712823017B9100AB1D70 /* AddUserNotesViewController.xib in Resources */,
 				EC91D40A22FA9D3500BE0A8D /* .swiftlint.yml in Resources */,
 				EC20126B2314ED2400646BDD /* CustomAlertViewController.xib in Resources */,
+				EC294DCA23B5CD56000A62C1 /* CustomNavigationView.xib in Resources */,
 				ECCEC2D022F40A0B00C3E2DE /* LaunchScreen.storyboard in Resources */,
 				ECCEC2CD22F40A0A00C3E2DE /* Assets.xcassets in Resources */,
 				ECFF9ABE22F9974800505213 /* LoginViewController.xib in Resources */,
@@ -683,38 +698,11 @@
 			files = (
 			);
 			inputFileListPaths = (
-			);
-			inputPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-NoteEm/Pods-NoteEm-frameworks.sh",
-				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
-				"${BUILT_PRODUCTS_DIR}/BoringSSL-GRPC/openssl_grpc.framework",
-				"${BUILT_PRODUCTS_DIR}/GTMSessionFetcher/GTMSessionFetcher.framework",
-				"${BUILT_PRODUCTS_DIR}/GoogleUtilities/GoogleUtilities.framework",
-				"${BUILT_PRODUCTS_DIR}/NVActivityIndicatorView/NVActivityIndicatorView.framework",
-				"${BUILT_PRODUCTS_DIR}/Protobuf/Protobuf.framework",
-				"${BUILT_PRODUCTS_DIR}/SwiftyDropbox/SwiftyDropbox.framework",
-				"${BUILT_PRODUCTS_DIR}/Toast-Swift/Toast_Swift.framework",
-				"${BUILT_PRODUCTS_DIR}/gRPC-C++/grpcpp.framework",
-				"${BUILT_PRODUCTS_DIR}/gRPC-Core/grpc.framework",
-				"${BUILT_PRODUCTS_DIR}/leveldb-library/leveldb.framework",
-				"${BUILT_PRODUCTS_DIR}/nanopb/nanopb.framework",
+				"${PODS_ROOT}/Target Support Files/Pods-NoteEm/Pods-NoteEm-frameworks-${CONFIGURATION}-input-files.xcfilelist",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputFileListPaths = (
-			);
-			outputPaths = (
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/openssl_grpc.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GTMSessionFetcher.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleUtilities.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/NVActivityIndicatorView.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Protobuf.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftyDropbox.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Toast_Swift.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/grpcpp.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/grpc.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/leveldb.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/nanopb.framework",
+				"${PODS_ROOT}/Target Support Files/Pods-NoteEm/Pods-NoteEm-frameworks-${CONFIGURATION}-output-files.xcfilelist",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -748,6 +736,7 @@
 				ECFF9ABD22F9974800505213 /* LoginViewController.swift in Sources */,
 				ECFF5DF7230165BC00FCB7FA /* LoginViewPresenter.swift in Sources */,
 				EC84C8CE2303D406005C5DF1 /* NoteViewModel.swift in Sources */,
+				EC294DCC23B5CD6F000A62C1 /* CustomNavigationView.swift in Sources */,
 				ECFF9AC222F9A92700505213 /* RegistrationPresenter.swift in Sources */,
 				ECFF9AA322F9788F00505213 /* HomeCoordinator.swift in Sources */,
 				ECFEEAED22FBE1480079DA0E /* OnboardingCoordinator.swift in Sources */,

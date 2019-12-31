@@ -8,23 +8,34 @@
 
 import UIKit
 
-class _BaseViewController: UIViewController {
+class BaseViewController: UIViewController {
+
+    var navBar: CustomNavigationView?
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
     }
-    
 
-    /*
-    // MARK: - Navigation
+    func setupNavigationBar(isLeftButtonEnabled: Bool, navTitle: String, isRightButtonEnabled: Bool) {
+        navBar = .fromNib()
+        navBar?.frame = CGRect(x: 0, y: 0, width: self.view.bounds.width, height: navBar?.bounds.height ?? 0.0)
 
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+        navBar?.navigationTitle.text = navTitle
+        // left button
+        if isLeftButtonEnabled {
+            navBar?.leftButton.isHidden = false
+        } else {
+            navBar?.leftButton.isHidden = true
+        }
+
+        // right button
+        if isRightButtonEnabled {
+            navBar?.rightButton.isHidden = false
+        } else {
+            navBar?.rightButton.isHidden = true
+        }
+        self.view.addSubview(navBar!)
+
     }
-    */
 
 }
