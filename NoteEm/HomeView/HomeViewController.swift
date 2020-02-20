@@ -20,10 +20,16 @@ protocol HomeViewType: class {
 class HomeViewController: UIViewController, HomeViewType {
 
     // MARK: Outlets
-    @IBOutlet weak var collectionView: UICollectionView!
+    @IBOutlet weak var addNotesButton: UIButton!
+    @IBOutlet weak var logoutButton: UIButton!
     @IBOutlet weak var tableView: UITableView!
     @IBOutlet weak var loader: NVActivityIndicatorView!
 
+    @IBOutlet weak var sidemenuView: UIView!
+    @IBOutlet weak var sideMenuButton: UIButton!
+    @IBOutlet weak var sidemenuTableView: UITableView!
+    @IBOutlet weak var sidemenuWidth: NSLayoutConstraint!
+    
     // MARK: Variables
     var presenter: HomeViewPresenterType!
     var coordinator: HomeCoordinator?
@@ -37,10 +43,15 @@ class HomeViewController: UIViewController, HomeViewType {
 
         presenter.getUserNotes()
 
-        setupNavigationView()
+        setupViews()
     }
 
-    private func setupNavigationView() {
+    private func setupViews() {
+
+        self.addNotesButton.addTarget(self, action: #selector(addUserNote), for: .touchUpInside)
+        self.addNotesButton.setTransparentUI(with: "Add Notes", cornerRadius: 15.0)
+        self.logoutButton.setTransparentUI(with: "Logout")
+        self.navigationController?.isNavigationBarHidden = true // false
         self.navigationItem.rightBarButtonItem = UIBarButtonItem(title: "Add Notes", style: .plain, target: self, action: #selector(addUserNote))
         self.navigationItem.leftBarButtonItem = nil
         self.navigationItem.hidesBackButton = true
@@ -74,6 +85,29 @@ class HomeViewController: UIViewController, HomeViewType {
         })
     }
 
+    @IBAction func sideMenuAction(_ sender: Any) {
+        toggleSidemenu()
+    }
+
+    private func toggleSidemenu() {
+        if sidemenuWidth.constant > 0 {
+            self.sidemenuWidth.constant = 0
+            self.sideMenuButton.setImage(UIImage(named: "sidemenuIcon"), for: .normal)
+            UIView.animate(withDuration: 0.25) {
+                self.view.layoutIfNeeded()
+
+            }
+        } else {
+            self.sidemenuWidth.constant = 100.0
+            let  imageView = UIImageView(image: UIImage(named: "cancel")?.withRenderingMode(.alwaysTemplate))
+            imageView.tintColor = .white
+            self.sideMenuButton.setImage(imageView.image, for: .normal)
+            UIView.animate(withDuration: 0.25) {
+                self.view.layoutIfNeeded()
+
+            }
+        }
+    }
 }
 
 // MARK: Home View Type

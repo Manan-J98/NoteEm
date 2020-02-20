@@ -23,7 +23,7 @@ class CustomAlertViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        backgroundView.backgroundColor = UIColor(red: 0, green: 0, blue: 0, alpha: 0.7)
+        setupViews()
 
     }
 
@@ -48,6 +48,12 @@ class CustomAlertViewController: UIViewController {
 
     required init?(coder aDecoder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
+    }
+
+    private func setupViews() {
+        confirmationButton.setTransparentUI(with: "Confirm")
+        denyButton.setTransparentUI(with: "Cancel")
+        backgroundView.backgroundColor = UIColor(red: 0, green: 0, blue: 0, alpha: 0.8)
     }
 
     // MARK: Callback

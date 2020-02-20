@@ -65,8 +65,8 @@ extension UIView {
 
 extension UIButton {
 
-    func setTransparentUI(with title: String) {
-        let cornerRadius: CGFloat = 25.0
+    func setTransparentUI(with title: String, cornerRadius: CGFloat = 25.0) {
+//        let cornerRadius: CGFloat = 25.0
         self.frame = CGRect(x: 100, y: 100, width: 200, height: 40)
         self.setTitle(title, for: .normal)
         self.setTitleColor(.white, for: .normal)

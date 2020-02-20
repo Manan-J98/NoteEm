@@ -13,6 +13,8 @@
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="AddUserNotesViewController" customModule="NoteEm" customModuleProvider="target">
             <connections>
                 <outlet property="bgView" destination="nBF-mB-5Za" id="s0T-fF-WjO"/>
+                <outlet property="cancelButton" destination="QcD-cb-udC" id="JuR-JN-QUj"/>
+                <outlet property="confirmButton" destination="1Td-eG-bU2" id="bfn-fT-Qpe"/>
                 <outlet property="userNotes" destination="qRf-10-E8w" id="ybX-Pe-gVc"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>

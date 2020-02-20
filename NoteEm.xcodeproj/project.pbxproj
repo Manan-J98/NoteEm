@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -15,6 +15,8 @@
 		EC294DCA23B5CD56000A62C1 /* CustomNavigationView.xib in Resources */ = {isa = PBXBuildFile; fileRef = EC294DC923B5CD56000A62C1 /* CustomNavigationView.xib */; };
 		EC294DCC23B5CD6F000A62C1 /* CustomNavigationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC294DCB23B5CD6F000A62C1 /* CustomNavigationView.swift */; };
 		EC3EFDB523B4DBA50038D4CF /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC3EFDB423B4DBA50038D4CF /* BaseViewController.swift */; };
+		EC4665FD23FA63750028A203 /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC4665FB23FA63750028A203 /* MapViewController.swift */; };
+		EC4665FE23FA63750028A203 /* MapViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = EC4665FC23FA63750028A203 /* MapViewController.xib */; };
 		EC84C8CE2303D406005C5DF1 /* NoteViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC84C8CD2303D406005C5DF1 /* NoteViewModel.swift */; };
 		EC91D40A22FA9D3500BE0A8D /* .swiftlint.yml in Resources */ = {isa = PBXBuildFile; fileRef = EC91D40922FA9D3400BE0A8D /* .swiftlint.yml */; };
 		ECC4712823017B9100AB1D70 /* AddUserNotesViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = ECC4712623017B9100AB1D70 /* AddUserNotesViewController.xib */; };
@@ -96,6 +98,8 @@
 		EC294DC923B5CD56000A62C1 /* CustomNavigationView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CustomNavigationView.xib; sourceTree = "<group>"; };
 		EC294DCB23B5CD6F000A62C1 /* CustomNavigationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomNavigationView.swift; sourceTree = "<group>"; };
 		EC3EFDB423B4DBA50038D4CF /* BaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "\U0010BaseViewController.swift"; sourceTree = "<group>"; };
+		EC4665FB23FA63750028A203 /* MapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
+		EC4665FC23FA63750028A203 /* MapViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MapViewController.xib; sourceTree = "<group>"; };
 		EC84C8CD2303D406005C5DF1 /* NoteViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoteViewModel.swift; sourceTree = "<group>"; };
 		EC91D40922FA9D3400BE0A8D /* .swiftlint.yml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = .swiftlint.yml; sourceTree = "<group>"; };
 		ECC4712623017B9100AB1D70 /* AddUserNotesViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AddUserNotesViewController.xib; sourceTree = "<group>"; };
@@ -391,6 +395,8 @@
 				ECFEEAEE22FBF3BA0079DA0E /* HomeViewPresenter.swift */,
 				ECFF9AB622F9951400505213 /* HomeViewController.swift */,
 				ECFF9AB722F9951400505213 /* HomeViewController.xib */,
+				EC4665FB23FA63750028A203 /* MapViewController.swift */,
+				EC4665FC23FA63750028A203 /* MapViewController.xib */,
 			);
 			path = HomeView;
 			sourceTree = "<group>";
@@ -587,6 +593,7 @@
 				ECC4712823017B9100AB1D70 /* AddUserNotesViewController.xib in Resources */,
 				EC91D40A22FA9D3500BE0A8D /* .swiftlint.yml in Resources */,
 				EC20126B2314ED2400646BDD /* CustomAlertViewController.xib in Resources */,
+				EC4665FE23FA63750028A203 /* MapViewController.xib in Resources */,
 				EC294DCA23B5CD56000A62C1 /* CustomNavigationView.xib in Resources */,
 				ECCEC2D022F40A0B00C3E2DE /* LaunchScreen.storyboard in Resources */,
 				ECCEC2CD22F40A0A00C3E2DE /* Assets.xcassets in Resources */,
@@ -760,6 +767,7 @@
 				ECCEC2C322F40A0800C3E2DE /* AppDelegate.swift in Sources */,
 				ECFEEAF622FC1BCC0079DA0E /* HomeTableViewCell.swift in Sources */,
 				ECFF9AA122F964B700505213 /* AppCoordinator.swift in Sources */,
+				EC4665FD23FA63750028A203 /* MapViewController.swift in Sources */,
 				ECC4712C230184AA00AB1D70 /* AddUserNotePresenter.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

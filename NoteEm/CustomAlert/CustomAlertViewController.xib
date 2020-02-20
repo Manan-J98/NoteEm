@@ -25,62 +25,69 @@
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="jnG-iW-DdU">
-                    <rect key="frame" x="0.0" y="20" width="320" height="548"/>
+                    <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                     <subviews>
-                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Are you sure you want to logout?" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4be-7o-37l">
-                            <rect key="frame" x="10" y="10" width="300" height="84"/>
-                            <fontDescription key="fontDescription" name="OriyaSangamMN-Bold" family="Oriya Sangam MN" pointSize="30"/>
-                            <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                            <nil key="highlightedColor"/>
-                        </label>
-                        <stackView opaque="NO" contentMode="scaleToFill" distribution="equalCentering" translatesAutoresizingMaskIntoConstraints="NO" id="tDY-CU-rHI">
-                            <rect key="frame" x="30" y="144" width="260" height="64"/>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Kuh-Of-Jd7">
+                            <rect key="frame" x="20" y="162" width="280" height="244"/>
                             <subviews>
-                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Kih-Yn-sHH">
-                                    <rect key="frame" x="0.0" y="0.0" width="64" height="64"/>
-                                    <state key="normal" image="Yes"/>
-                                    <connections>
-                                        <action selector="confirmAction:" destination="-1" eventType="touchUpInside" id="prz-lj-JqL"/>
-                                    </connections>
-                                </button>
-                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4Tp-lf-z18">
-                                    <rect key="frame" x="196" y="0.0" width="64" height="64"/>
-                                    <constraints>
-                                        <constraint firstAttribute="height" constant="64" id="86d-Qw-dKT"/>
-                                        <constraint firstAttribute="width" constant="64" id="rcU-3N-bAE"/>
-                                    </constraints>
-                                    <state key="normal" image="No"/>
-                                    <connections>
-                                        <action selector="cancelAction:" destination="-1" eventType="touchUpInside" id="Th7-jO-Pzp"/>
-                                    </connections>
-                                </button>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Are you sure you want to logout?" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4be-7o-37l">
+                                    <rect key="frame" x="0.0" y="0.0" width="280" height="84"/>
+                                    <fontDescription key="fontDescription" name="OriyaSangamMN-Bold" family="Oriya Sangam MN" pointSize="30"/>
+                                    <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    <nil key="highlightedColor"/>
+                                </label>
+                                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="tDY-CU-rHI">
+                                    <rect key="frame" x="0.0" y="104" width="280" height="120"/>
+                                    <subviews>
+                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Kih-Yn-sHH">
+                                            <rect key="frame" x="0.0" y="0.0" width="280" height="50"/>
+                                            <connections>
+                                                <action selector="confirmAction:" destination="-1" eventType="touchUpInside" id="prz-lj-JqL"/>
+                                            </connections>
+                                        </button>
+                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4Tp-lf-z18">
+                                            <rect key="frame" x="0.0" y="70" width="280" height="50"/>
+                                            <constraints>
+                                                <constraint firstAttribute="height" constant="50" id="xB4-bL-Fbj"/>
+                                            </constraints>
+                                            <connections>
+                                                <action selector="cancelAction:" destination="-1" eventType="touchUpInside" id="Th7-jO-Pzp"/>
+                                            </connections>
+                                        </button>
+                                    </subviews>
+                                </stackView>
                             </subviews>
-                        </stackView>
+                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <color key="tintColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <constraints>
+                                <constraint firstItem="4be-7o-37l" firstAttribute="top" secondItem="Kuh-Of-Jd7" secondAttribute="top" id="JvQ-25-fDd"/>
+                                <constraint firstAttribute="bottom" secondItem="tDY-CU-rHI" secondAttribute="bottom" constant="20" id="RII-mx-igr"/>
+                                <constraint firstItem="4be-7o-37l" firstAttribute="leading" secondItem="Kuh-Of-Jd7" secondAttribute="leading" id="Vmt-Lj-gDA"/>
+                                <constraint firstItem="tDY-CU-rHI" firstAttribute="top" secondItem="4be-7o-37l" secondAttribute="bottom" constant="20" id="gqE-MB-UMU"/>
+                                <constraint firstItem="tDY-CU-rHI" firstAttribute="leading" secondItem="Kuh-Of-Jd7" secondAttribute="leading" id="kA3-f1-dub"/>
+                                <constraint firstAttribute="trailing" secondItem="tDY-CU-rHI" secondAttribute="trailing" id="nm4-VF-ea1"/>
+                                <constraint firstAttribute="trailing" secondItem="4be-7o-37l" secondAttribute="trailing" id="xOi-iY-yXZ"/>
+                            </constraints>
+                        </view>
                     </subviews>
                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     <constraints>
-                        <constraint firstItem="4be-7o-37l" firstAttribute="leading" secondItem="jnG-iW-DdU" secondAttribute="leading" constant="10" id="DZY-DX-zdD"/>
-                        <constraint firstAttribute="trailing" secondItem="tDY-CU-rHI" secondAttribute="trailing" constant="30" id="JwS-Um-xa4"/>
-                        <constraint firstItem="tDY-CU-rHI" firstAttribute="leading" secondItem="jnG-iW-DdU" secondAttribute="leading" constant="30" id="o5r-rC-c0I"/>
-                        <constraint firstItem="tDY-CU-rHI" firstAttribute="top" secondItem="4be-7o-37l" secondAttribute="bottom" constant="50" id="sNi-4g-VRY"/>
-                        <constraint firstItem="4be-7o-37l" firstAttribute="top" secondItem="jnG-iW-DdU" secondAttribute="top" constant="10" id="xre-Ul-pct"/>
-                        <constraint firstAttribute="trailing" secondItem="4be-7o-37l" secondAttribute="trailing" constant="10" id="zwx-g4-zbJ"/>
+                        <constraint firstItem="Kuh-Of-Jd7" firstAttribute="centerX" secondItem="jnG-iW-DdU" secondAttribute="centerX" id="8A8-qc-k4F"/>
+                        <constraint firstItem="Kuh-Of-Jd7" firstAttribute="leading" secondItem="jnG-iW-DdU" secondAttribute="leading" constant="20" id="AO1-vw-JMW"/>
+                        <constraint firstAttribute="trailing" secondItem="Kuh-Of-Jd7" secondAttribute="trailing" constant="20" id="Go6-ca-haG"/>
+                        <constraint firstItem="Kuh-Of-Jd7" firstAttribute="centerY" secondItem="jnG-iW-DdU" secondAttribute="centerY" id="e4z-0a-UND"/>
                     </constraints>
                 </view>
             </subviews>
             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
             <constraints>
                 <constraint firstItem="jnG-iW-DdU" firstAttribute="bottom" secondItem="fnl-2z-Ty3" secondAttribute="bottom" id="Z51-A4-Jxr"/>
+                <constraint firstItem="jnG-iW-DdU" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="jC7-3y-ix1"/>
                 <constraint firstItem="jnG-iW-DdU" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="kBF-kQ-Tll"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="jnG-iW-DdU" secondAttribute="trailing" id="lud-Dv-98c"/>
-                <constraint firstItem="jnG-iW-DdU" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="topMargin" id="pBZ-GU-O9h"/>
             </constraints>
             <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
-            <point key="canvasLocation" x="106" y="157"/>
+            <point key="canvasLocation" x="105" y="156.33802816901408"/>
         </view>
     </objects>
-    <resources>
-        <image name="No" width="64" height="64"/>
-        <image name="Yes" width="64" height="64"/>
-    </resources>
 </document>

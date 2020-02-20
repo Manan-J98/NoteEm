@@ -9,8 +9,6 @@
 import UIKit
 import NVActivityIndicatorView
 
-
-
 class EditUserNoteViewController: UIViewController, EditUserNoteDelegate {
 
     var presenter: EditUserNotePresenter!
@@ -18,7 +16,14 @@ class EditUserNoteViewController: UIViewController, EditUserNoteDelegate {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        setupViews()
         setupPresenter()
+    }
+
+    private func setupViews() {
+        self.updateButton.setTransparentUI(with: "Update")
+        self.navigationController?.isNavigationBarHidden = true
+        self.noteTextView.backgroundColor = UIColor(red: 1, green: 1, blue: 1, alpha: 0.25)
     }
 
     private func setupPresenter() {
@@ -32,11 +37,15 @@ class EditUserNoteViewController: UIViewController, EditUserNoteDelegate {
     }
 
     @IBOutlet weak var noteTextView: UITextView!
-
+    @IBOutlet weak var updateButton: UIButton!
     @IBOutlet weak var loader: NVActivityIndicatorView!
-    
+
     @IBAction func updateAction(_ sender: Any) {
         presenter.updateUserNote(index: presenter.index!, data: noteTextView.text)
+    }
+
+    @IBAction func backAction(_ sender: Any) {
+        self.navigationController?.popViewController(animated: true)
     }
 
     func showErrorMessage(error: Bool, message: String) {

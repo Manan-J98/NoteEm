@@ -36,6 +36,7 @@ class SplashViewController: UIViewController {
     func setupUI() {
         registerButton.setTransparentUI(with: "Register")
         homeButton.setTransparentUI(with: "Home")
+        
     }
    
     func checkLoggedInStatus() {

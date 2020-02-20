@@ -23,7 +23,7 @@ class LoginViewController: UIViewController, LoginView {
     }
 
     @IBOutlet weak var loader: NVActivityIndicatorView!
-
+    @IBOutlet weak var loginButton: UIButton!
     @IBOutlet weak var usernameLabel: UILabel!
     @IBOutlet weak var passwordLabel: UILabel!
     @IBOutlet weak var username: UITextField!
@@ -36,7 +36,13 @@ class LoginViewController: UIViewController, LoginView {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        setupViews()
         setupPresenter()
+    }
+
+    private func setupViews() {
+        self.navigationController?.isNavigationBarHidden = true
+        loginButton.setTransparentUI(with: "Login")
     }
 
      func setupPresenter() {
@@ -53,6 +59,10 @@ class LoginViewController: UIViewController, LoginView {
 
     func stopAnimating() {
         loader.stopAnimating()
+    }
+
+    @IBAction func backButtonAction(_ sender: Any) {
+        self.navigationController?.popViewController(animated: true)
     }
 
     @IBAction func loginButtonAction(_ sender: Any) {

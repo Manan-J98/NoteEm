@@ -14,6 +14,7 @@
             <connections>
                 <outlet property="loader" destination="MBe-jK-DnF" id="gSJ-ag-ZCl"/>
                 <outlet property="noteTextView" destination="Vjy-fX-sNk" id="vur-Cf-H1F"/>
+                <outlet property="updateButton" destination="wX3-Mj-aej" id="B8z-ph-D0e"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
@@ -22,8 +23,11 @@
             <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
+                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="appBackground" translatesAutoresizingMaskIntoConstraints="NO" id="oSO-9x-5fZ">
+                    <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                </imageView>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wX3-Mj-aej">
-                    <rect key="frame" x="0.0" y="686" width="414" height="50"/>
+                    <rect key="frame" x="20" y="666" width="374" height="50"/>
                     <color key="backgroundColor" red="0.15061718230000001" green="0.42306715249999999" blue="0.69155120849999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     <constraints>
                         <constraint firstAttribute="height" constant="50" id="Fye-Yy-n4Y"/>
@@ -50,9 +54,13 @@
                         </userDefinedRuntimeAttribute>
                     </userDefinedRuntimeAttributes>
                 </view>
-                <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" misplaced="YES" text="Standard Note" textAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="Vjy-fX-sNk">
-                    <rect key="frame" x="5" y="32" width="404" height="646"/>
-                    <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="Standard Note" textAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="Vjy-fX-sNk">
+                    <rect key="frame" x="10" y="82" width="394" height="200"/>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="200" id="F5P-29-ctT"/>
+                    </constraints>
+                    <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     <fontDescription key="fontDescription" name="OriyaSangamMN" family="Oriya Sangam MN" pointSize="20"/>
                     <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                     <userDefinedRuntimeAttributes>
@@ -61,21 +69,37 @@
                         </userDefinedRuntimeAttribute>
                     </userDefinedRuntimeAttributes>
                 </textView>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eKB-W4-yEg">
+                    <rect key="frame" x="10" y="40" width="32" height="32"/>
+                    <state key="normal" image="backIcon"/>
+                    <connections>
+                        <action selector="backAction:" destination="-1" eventType="touchUpInside" id="rUl-tG-3bt"/>
+                    </connections>
+                </button>
             </subviews>
             <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
             <constraints>
-                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="wX3-Mj-aej" secondAttribute="trailing" id="5O8-pS-gwq"/>
-                <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="wX3-Mj-aej" secondAttribute="bottom" id="DWb-o1-mr8"/>
-                <constraint firstItem="Vjy-fX-sNk" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="5" id="MMI-de-rao"/>
-                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="Vjy-fX-sNk" secondAttribute="trailing" constant="5" id="YDr-sl-qhc"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="oSO-9x-5fZ" secondAttribute="trailing" id="3TO-mW-FPL"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="oSO-9x-5fZ" secondAttribute="bottom" id="4ZJ-GS-Vhv"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="wX3-Mj-aej" secondAttribute="trailing" constant="20" id="5O8-pS-gwq"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="wX3-Mj-aej" secondAttribute="bottom" constant="20" id="DWb-o1-mr8"/>
+                <constraint firstItem="Vjy-fX-sNk" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="10" id="MMI-de-rao"/>
+                <constraint firstItem="eKB-W4-yEg" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="10" id="R9F-ZF-GBl"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="Vjy-fX-sNk" secondAttribute="trailing" constant="10" id="YDr-sl-qhc"/>
                 <constraint firstItem="MBe-jK-DnF" firstAttribute="centerY" secondItem="i5M-Pr-FkT" secondAttribute="centerY" id="bCm-qu-r1F"/>
-                <constraint firstItem="wX3-Mj-aej" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="egl-IZ-gIa"/>
-                <constraint firstItem="Vjy-fX-sNk" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" constant="10" id="jYn-8Q-ShN"/>
-                <constraint firstItem="wX3-Mj-aej" firstAttribute="top" secondItem="Vjy-fX-sNk" secondAttribute="bottom" constant="10" id="sfG-1j-A5d"/>
+                <constraint firstItem="wX3-Mj-aej" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="20" id="egl-IZ-gIa"/>
+                <constraint firstItem="Vjy-fX-sNk" firstAttribute="top" secondItem="eKB-W4-yEg" secondAttribute="bottom" constant="10" id="iQB-5t-MNe"/>
+                <constraint firstItem="eKB-W4-yEg" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" constant="20" id="jJp-RP-jIc"/>
+                <constraint firstItem="oSO-9x-5fZ" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="mdG-WK-j6w"/>
+                <constraint firstItem="oSO-9x-5fZ" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="p96-DF-zjd"/>
                 <constraint firstItem="MBe-jK-DnF" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="ymm-N7-S4N"/>
             </constraints>
             <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
-            <point key="canvasLocation" x="99" y="112"/>
+            <point key="canvasLocation" x="98.550724637681171" y="111.68478260869566"/>
         </view>
     </objects>
+    <resources>
+        <image name="appBackground" width="1920" height="1080"/>
+        <image name="backIcon" width="32" height="32"/>
+    </resources>
 </document>

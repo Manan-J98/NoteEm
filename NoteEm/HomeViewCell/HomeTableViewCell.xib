@@ -81,6 +81,7 @@
                     <constraint firstAttribute="bottom" secondItem="jzr-wU-8vu" secondAttribute="bottom" constant="10" id="grd-eU-Jqx"/>
                 </constraints>
             </tableViewCellContentView>
+            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
             <connections>
                 <outlet property="editButton" destination="JAo-MH-JhB" id="gnR-Ld-YeG"/>

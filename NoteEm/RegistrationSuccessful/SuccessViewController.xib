@@ -12,6 +12,7 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="SuccessViewController" customModule="NoteEm" customModuleProvider="target">
             <connections>
+                <outlet property="goToHomeButton" destination="Yds-ux-S76" id="i3Y-uK-Pa1"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
@@ -20,8 +21,11 @@
             <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
+                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="appBackground" translatesAutoresizingMaskIntoConstraints="NO" id="ug7-F3-0JG">
+                    <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                </imageView>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Yds-ux-S76">
-                    <rect key="frame" x="0.0" y="686" width="414" height="50"/>
+                    <rect key="frame" x="20" y="666" width="374" height="50"/>
                     <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     <constraints>
                         <constraint firstAttribute="height" constant="50" id="WCJ-tq-mUI"/>
@@ -43,7 +47,7 @@
                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Registration Successfull" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Weg-LJ-jo1">
                             <rect key="frame" x="42" y="2" width="239" height="28"/>
                             <fontDescription key="fontDescription" name="OriyaSangamMN-Bold" family="Oriya Sangam MN" pointSize="20"/>
-                            <nil key="textColor"/>
+                            <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             <nil key="highlightedColor"/>
                         </label>
                     </subviews>
@@ -51,16 +55,22 @@
             </subviews>
             <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
             <constraints>
+                <constraint firstItem="ug7-F3-0JG" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="3TW-KH-3R7"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="ug7-F3-0JG" secondAttribute="bottom" id="5lM-Ja-7xf"/>
+                <constraint firstItem="ug7-F3-0JG" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="8Ci-Q4-kjV"/>
                 <constraint firstItem="nWU-Hd-9m6" firstAttribute="centerY" secondItem="i5M-Pr-FkT" secondAttribute="centerY" id="8SA-Ea-vfC"/>
-                <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="Yds-ux-S76" secondAttribute="bottom" id="936-ZB-4Ns"/>
-                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="Yds-ux-S76" secondAttribute="trailing" id="ckZ-Wd-84s"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="Yds-ux-S76" secondAttribute="bottom" constant="20" id="936-ZB-4Ns"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="Yds-ux-S76" secondAttribute="trailing" constant="20" id="ckZ-Wd-84s"/>
                 <constraint firstItem="nWU-Hd-9m6" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="dY6-mm-3Gh"/>
-                <constraint firstItem="Yds-ux-S76" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="pfj-wx-mN0"/>
+                <constraint firstItem="Yds-ux-S76" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="20" id="pfj-wx-mN0"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="ug7-F3-0JG" secondAttribute="trailing" id="zsv-w1-vOT"/>
             </constraints>
             <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
+            <point key="canvasLocation" x="131.8840579710145" y="153.2608695652174"/>
         </view>
     </objects>
     <resources>
+        <image name="appBackground" width="1920" height="1080"/>
         <image name="checked" width="32" height="32"/>
     </resources>
 </document>

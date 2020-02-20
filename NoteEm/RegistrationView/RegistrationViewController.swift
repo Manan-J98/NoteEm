@@ -14,6 +14,7 @@ class RegistrationViewController: UIViewController {
     // MARK: Outlets
     @IBOutlet weak var tableView: UITableView!
     @IBOutlet weak var loader: NVActivityIndicatorView!
+    @IBOutlet weak var registerButton: UIButton!
 
     // MARK: Variables
     var presenter: RegistrationPresenter!
@@ -21,8 +22,14 @@ class RegistrationViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        setupViews()
         setupPresenter()
         setupTableView()
+    }
+
+    private func setupViews() {
+        self.navigationController?.isNavigationBarHidden = true
+        self.registerButton.setTransparentUI(with: "Register")
     }
 
     func startAnimating() {
@@ -43,6 +50,10 @@ class RegistrationViewController: UIViewController {
         tableView.dataSource = self
         tableView.separatorStyle = .none
         self.tableView.register(UINib(nibName: "GeneralRegistrationCell", bundle: nil), forCellReuseIdentifier: "GeneralRegistrationCell")
+    }
+
+    @IBAction func backButtonAction(_ sender: Any) {
+        self.navigationController?.popViewController(animated: true)
     }
 
     @IBAction func registerAction(_ sender: Any) {

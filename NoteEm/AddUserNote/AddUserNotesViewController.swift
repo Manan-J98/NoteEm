@@ -17,6 +17,8 @@ class AddUserNotesViewController: UIViewController, AddUserNoteView {
     // MARK: Outlets
     @IBOutlet weak var bgView: UIView!
     @IBOutlet weak var userNotes: UITextField!
+    @IBOutlet weak var cancelButton: UIButton!
+    @IBOutlet weak var confirmButton: UIButton!
 
     weak var delegate: NoteViewDelegate?
 
@@ -36,7 +38,9 @@ class AddUserNotesViewController: UIViewController, AddUserNoteView {
     }
 
     private func setupView() {
-        bgView.backgroundColor = UIColor(red: 0.0, green: 0.0, blue: 0.0, alpha: 0.7)
+        self.cancelButton.setTransparentUI(with: "Cancel", cornerRadius: 5.0)
+        self.confirmButton.setTransparentUI(with: "Confirm", cornerRadius: 5.0)
+        bgView.backgroundColor = UIColor(red: 0.0, green: 0.0, blue: 0.0, alpha: 0.8)
     }
 
     func showErrorMessage(error: Bool, message: String) {

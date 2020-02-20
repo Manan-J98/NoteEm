@@ -21,8 +21,8 @@ class AppCoordinator: BaseCoordinator {
 
     override func start() {
 
-        let vc = SplashViewController(nibName: "SplashViewController", bundle: nil)
-        vc.coordinator = self
+        let vc = MapViewController(nibName: "MapViewController", bundle: nil)
+//        vc.coordinator = self
         navigationController = UINavigationController.init(rootViewController: vc)
 
         window.rootViewController = navigationController

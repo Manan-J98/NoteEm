@@ -96,6 +96,9 @@ PODS:
   - gRPC-Core/Interface (1.21.0)
   - GTMSessionFetcher/Core (1.2.2)
   - leveldb-library (1.20)
+  - Mapbox-iOS-SDK (5.7.0):
+    - MapboxMobileEvents (= 0.10.2)
+  - MapboxMobileEvents (0.10.2)
   - nanopb (0.3.901):
     - nanopb/decode (= 0.3.901)
     - nanopb/encode (= 0.3.901)
@@ -112,6 +115,7 @@ DEPENDENCIES:
   - Firebase/Auth
   - Firebase/Core
   - Firebase/Firestore
+  - Mapbox-iOS-SDK (~> 5.7)
   - NVActivityIndicatorView
   - SwiftLint
   - Toast-Swift
@@ -137,6 +141,9 @@ SPEC REPOS:
     - Protobuf
     - SwiftLint
     - Toast-Swift
+  trunk:
+    - Mapbox-iOS-SDK
+    - MapboxMobileEvents
 
 SPEC CHECKSUMS:
   BoringSSL-GRPC: db8764df3204ccea016e1c8dd15d9a9ad63ff318
@@ -153,12 +160,14 @@ SPEC CHECKSUMS:
   gRPC-Core: c9aef9a261a1247e881b18059b84d597293c9947
   GTMSessionFetcher: 61bb0f61a4cb560030f1222021178008a5727a23
   leveldb-library: 08cba283675b7ed2d99629a4bc5fd052cd2bb6a5
+  Mapbox-iOS-SDK: 1b7cb0e739247d20ef75f5f14aa6ce34e1f0660f
+  MapboxMobileEvents: 2bc0ca2eedb627b73cf403258dce2b2fa98074a6
   nanopb: 2901f78ea1b7b4015c860c2fdd1ea2fee1a18d48
   NVActivityIndicatorView: b19ddab2576f805cbe0fb2306cba3476e09a1dea
   Protobuf: 1097ca58584c8d9be81bfbf2c5ff5975648dd87a
   SwiftLint: 79d48a17c6565dc286c37efb8322c7b450f95c67
   Toast-Swift: 36f4720243c8582c2be243a60a51e193c761f541
 
-PODFILE CHECKSUM: 7fd5144299fcc70dce0be8fcb9b8ea40a72a497a
+PODFILE CHECKSUM: cf53c996e8314e0c80749b29f29ef5cf6e50bb34
 
 COCOAPODS: 1.8.1

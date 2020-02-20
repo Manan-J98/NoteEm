@@ -20,7 +20,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         FirebaseApp.configure()
         var _ = Firestore.firestore()
         window = UIWindow()
-
         let appCoordinator = AppCoordinator(window: self.window!)
         appCoordinator.start()
         self.appCoordinator = appCoordinator
